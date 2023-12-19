@@ -348,6 +348,7 @@ a {
     transition: 1s;
     animation: SliderMove 5s infinite;
     animation-direction: alternate;
+    opacity: 0;
 }
 
 @keyframes SliderMove {
