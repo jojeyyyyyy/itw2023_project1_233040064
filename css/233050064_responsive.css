@@ -1,7 +1,4 @@
-@media screen and (max-width: 1000px) {
-    body {
-        overflow: hidden;
-    }
+@media screen and (max-width: 1024px) {
 
     p {
         font-size: 0.9rem;
@@ -36,9 +33,7 @@
 }
 
 @media screen and (max-width: 825px) {
-    body {
-        overflow: hidden;
-    }
+   
 
     /* Burger */
 
@@ -158,9 +153,7 @@
 }
 
 @media  screen and (max-width: 640px) {
-    body {
-        overflow: hidden;
-    }
+
 
     /* Hero Section */
 
@@ -205,19 +198,69 @@
 }
 
 @media screen and (max-width: 576px) {
-    body {
-        overflow: hidden;
+
+    .pre-title {
+        font-size: 20px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .hero-left p {
+        
+        padding: 20px;
+        font-size: 15px;
+    }
+
+    .hero-right {
+        margin: auto;
     }
 
     .hero-right img {
-        padding-left: 80px;
-        transform: scale(1.2);
-        padding-top: 50px;
+        margin: auto;
+        padding: 50px;
+        width: 250px;
+        height: 400px;
+
     }
 
-    .portfolio img {
-        padding-left: 130px;
+    .service .pre-title {
+        text-align: center;
     }
+
+    .service h4 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .service p {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .portfolios {
+        margin-top: 300px;
+        margin-bottom: 500px;
+        
+    }
+
+    .portfolio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+
+
+    .main-container h1 {
+        font-size: 25px;
+    }
+
+    .portfolio .portfolio-cover img {
+        width: 360px;
+        height: 200px;
+    }
+
 
     .video-1 {
         margin-left: -130px;
@@ -231,17 +274,18 @@
 }
 
 @media screen and (max_width: 450px) {
-    body {
-        overflow: hidden;
-    }
+
 
 .hero-right img {
     padding-left: 50px;
     transform: scale(1);
 }
 
-.portfolio img {
-    padding-left: 100px;
+.portfolios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: flex;
 }
 
 .video-1 {

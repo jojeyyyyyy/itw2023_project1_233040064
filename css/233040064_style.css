@@ -64,6 +64,10 @@ a {
     text-decoration: none;
 }
 
+nav ul li a {
+    color: #0000EE;
+}
+
 .main-container {
     width: 1200px;
     margin: 0 auto;
@@ -73,9 +77,17 @@ a {
     .main-container {
         width: 90%;
     }
+
+    
+
+     
 }
 
 /* Buttons */
+
+.portfolio {
+    margin-bottom: 500px;
+}
 
 .btn {
     padding: 1rem 1.5rem;
@@ -131,7 +143,7 @@ a {
 .container {
     width: 100%;
     height: 100vh;
-    background-image: url(./Project\ 1/);
+    background-image: url(./Proje);
 }
 
 
@@ -149,7 +161,7 @@ a {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 9999;
+    /* z-index: 9999; */
 }
 
 .navbar .navbar-nav a {
@@ -244,10 +256,13 @@ a {
 /* Hero Section */
 
 #hero {
-    height: 720px;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    z-index: 0;
+
+
 }
 
 .hero-right img {
@@ -256,6 +271,38 @@ a {
     transform: scale(1.2);
     width: 450px;
     height: 600px;
+    z-index: 4;
+}
+
+.hero-left {
+    margin: 50px;
+    color: #0000EE;
+}
+
+.hero-left .pre-title {
+    color: #0000EE;
+    font-size: 16px;
+}
+
+.hero-left p {
+    color: #0000EE;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+#service .pre-title {
+    color: white;
+    font-size: 20px;
+}
+
+.grid-3 p {
+    color: #0000EE;
+    font-size: 16px;
+}
+
+.service p {
+    color: #0000EE;
+    font-size: 16px;
 }
 
 .hero-name {
@@ -264,8 +311,17 @@ a {
     margin: 0.5rem 0 1rem;
 }
 
+.brand h3 span {
+    color: #0000EE;
+    font-size: 30px;
+}
+
+.brand {
+    font-size: 20px;
+}
+
 .hero-name span {
-    color: var(--primaryIconCOlor);
+    color: #0000EE;
 }
 
 /* Service-Section */
@@ -273,6 +329,7 @@ a {
 #services {
     background-color: black;
     padding: var(--sectionPadding);
+    margin-bottom: 400px;
 }
 
 .services .pre-title {
@@ -307,7 +364,9 @@ a {
 .service-icon svg {
     fill: var(--primaryIconCOlor);
 }
-
+.service-content{
+    text-align: center;
+}
 /* Porfolio - Section */
 
 #potfolios {
@@ -316,14 +375,19 @@ a {
 
 .portfolio {
     border-radius: var(--itemBorderRadius);
+    margin-top: 20px;
+}
+
+.section-title {
+    margin-top: 400px;
 }
 
 .portfolio img {
     padding-left: 150px;
 }
 
-.portfolios .pre-title {
-    margin: 0 auto;
+.pre-title{
+    margin:auto
 }
 
 .portfolios .section-title {
@@ -335,7 +399,6 @@ a {
 .photos {
     width: 400px;
     margin: 10px auto;
-    overflow: hidden;
     padding: 20px;
 }
 
@@ -348,7 +411,7 @@ a {
     transition: 1s;
     animation: SliderMove 5s infinite;
     animation-direction: alternate;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 @keyframes SliderMove {
@@ -469,7 +532,7 @@ a {
 .btn-submit {
     width: 100%;
     padding: 0.75rem 1.3rem;
-    background-color: var(--primaryIconCOlor);
+    background-color: var(--secondaryTextColor);
     color: #fff;
     border: none;
     border-radius: 3px;
@@ -599,5 +662,111 @@ footer p {
 @media (max-width: 450px) {
     html {
         font-size: 55%;
+    }
+}
+
+
+/* Navbar respon */
+nav{
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+    font-weight: 600;
+}
+nav ul li a{
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: rgb(255, 255, 255);
+}
+
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+.menu-toggle span{
+    display: block;
+    background-color: white;
+    width: 28px;
+    height: 3px;
+    transition: all 0.3s;
+}
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -10px;
+    top: -3px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: +1;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    background-color: rgb(255, 255, 255);
+    transform-origin: 0 0;
+    transform: rotate(45deg) translate(-1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4){
+    background-color: rgb(255, 255, 255);
+    transform-origin: 0 0;
+    transform: rotate(-45deg) translate(-3px);
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: translate(-6px) scale(0);
+    opacity: 0;
+
+}
+@media screen and (max-width: 768px) {
+    nav ul{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 576px) {
+    .menu-toggle{
+        display: flex;
+    }
+
+
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        background: rgb(0, 0, 0);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4.5px );
+        -webkit-backdrop-filter: blur( 4.5px );
+        height: 100vh;
+        width: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: -1;
+        transform: translateY(-100%);
+        transition: all 0.5s;
+        opacity: 0;
+        font-size: 20px;
+        color: #081b29;
+    } 
+    nav ul.slide{
+        transform: translateY(0);
+        opacity: 1;
     }
 }
