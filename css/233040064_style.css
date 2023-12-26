@@ -326,11 +326,17 @@ nav ul li a {
 
 /* Service-Section */
 
-#services {
+#service {
     background-color: black;
     padding: var(--sectionPadding);
-    margin-bottom: 400px;
+    margin-bottom: 800px;
 }
+
+/* .grid-3 .service .service-icon svg {
+    margin-right: 40px;
+    margin-bottom: 25%;
+} */
+
 
 .services .pre-title {
     margin: 0 auto;
